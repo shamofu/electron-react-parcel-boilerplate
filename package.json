@@ -7,7 +7,7 @@
     "start": "concurrently --kill-others \"yarn run parcel\" \"yarn run electron\"",
     "dist": "yarn run parcel:build && build --dir --x64 --publish=never",
     "electron": "electron .",
-    "parcel": "parcel app/renderer/index.html -p 1124 -d app/renderer/.parcel/develop",
+    "parcel": "parcel app/renderer/index.html -p 1124 -d app/renderer/.parcel/development",
     "parcel:build": "parcel build app/renderer/index.html --public-url ../ -d app/renderer/.parcel/production",
     "test": "echo \"Error: no test specified\"",
     "lint": "eslint app",
