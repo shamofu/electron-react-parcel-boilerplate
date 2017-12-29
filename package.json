@@ -8,7 +8,7 @@
     "dist": "yarn run parcel:build && build --dir --x64 --publish=never",
     "electron": "electron .",
     "parcel": "parcel app/renderer/index.html -p 1124 -d app/renderer/.parcel/develop",
-    "parcel:build": "parcel build app/renderer/index.html --public-url ./ -d app/renderer/.parcel/production",
+    "parcel:build": "parcel build app/renderer/index.html --public-url ../ -d app/renderer/.parcel/production",
     "test": "echo \"Error: no test specified\"",
     "lint": "eslint app",
     "lint:fix": "yarn run lint --fix"

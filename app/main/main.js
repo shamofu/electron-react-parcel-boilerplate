@@ -21,7 +21,7 @@ app.on('ready', async () => {
     mainWindow.show();
   });
 
-  const devPath = 'http://localhost:1124/';
+  const devPath = 'http://localhost:1124';
 
   const prodPath = format({
     pathname: resolve('app/renderer/.parcel/production/index.html'),
@@ -30,7 +30,7 @@ app.on('ready', async () => {
   });
 
   const url = isDev ? devPath : prodPath;
-  mainWindow.loadURL(url);
+  mainWindow.loadURL(url + '/#/start');
   mainWindow.setMenu(null);
 
   if (isDev) mainWindow.webContents.openDevTools();

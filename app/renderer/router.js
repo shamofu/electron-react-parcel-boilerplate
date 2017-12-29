@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { StaticRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Start from './pages/start';
 
-const context = {};
 const App = () => (
-  <Router context={ context }>
-    <Route path='/' exact component={ Start } />
+  <Router>
+    <Switch>
+      <Route exact path='/start' component={ Start } />
+      <Route component={ () => <h1>204 No Content</h1> } />;
+    </Switch>
   </Router>
 );
 
