@@ -1,0 +1,10 @@
+# output
+/dist
+/.cache
+/app/renderer/.parcel
+
+# dependencies
+/node_modules
+
+# logs
+*.log

@@ -1,0 +1,42 @@
+{
+  "name": "electron-react-parcel-boilerplate",
+  "version": "0.0.0",
+  "description": "A boilerplate for Electron + React + Parcel.",
+  "main": "app/main/main.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"yarn run parcel\" \"yarn run electron\"",
+    "dist": "yarn run parcel:build && build --dir --x64 --publish=never",
+    "electron": "electron .",
+    "parcel": "parcel app/renderer/index.html -p 1124 -d app/renderer/.parcel/develop",
+    "parcel:build": "parcel build app/renderer/index.html --public-url ./ -d app/renderer/.parcel/production",
+    "test": "echo \"Error: no test specified\"",
+    "lint": "eslint app",
+    "lint:fix": "yarn run lint --fix"
+  },
+  "author": "shamofu",
+  "license": "MIT",
+  "build": {
+    "files": [
+      "app/**/*",
+      "!app/renderer",
+      "app/renderer/.parcel/production/**/*"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.5.1",
+    "electron": "^1.7.10",
+    "electron-builder": "^19.49.2",
+    "eslint": "^4.14.0",
+    "eslint-plugin-react": "^7.5.1",
+    "parcel-bundler": "^1.3.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "electron-is-dev": "^0.3.0"
+  }
+}

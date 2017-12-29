@@ -1,0 +1,31 @@
+language: node_js
+node_js: lts/*
+os: osx
+osx_image: xcode9.1
+env:
+  global:
+  - APP_NAME=electron-react-parcel-boilerplate
+  - CSC_IDENTITY_AUTO_DISCOVERY=false
+before_install:
+  - brew update
+install:
+  - yarn install
+script:
+  - yarn test
+before_deploy:
+  - yarn run dist -mwl
+  - cd dist/win-unpacked && zip -9 -ry ${APP_NAME}-win-x64.zip . && cd ../..
+  - cd dist/mac && zip -9 -ry ${APP_NAME}-mac-x64.zip . && cd ../..
+  - cd dist/linux-unpacked && zip -9 -ry ${APP_NAME}-linux-x64.zip . && cd ../..
+deploy:
+  provider: releases
+  api_key:
+    secure: Rpc9QXGiLswMzNy4RBGVQHu0vE6MaNDhEslNAH6zR0NhEiMtzZ9eUl1Gs/Vpga0NFQJodAM/vC2/S9rz+0wQywv0HxBwdi6FqreRD+VwOk6bfoIrzfkJGP1VgAb/KZEW/YBjXN4c7oq3clM4oBuY3B2C2Ct6F9XnOFPx6l/TYiTDPLBMAQpzzhHeD8xpChtiWRYhffhf3wnc/qWU5Vx4UXnfPW529Hq/bnnFghkhcNAN8HcSLZBjYMGbo5l0AFWVBi3PbxOa4eIU/L3SFjI1gNls+a0dPWSeb3vGwt/B13FamYtLvMLe9JRSBcM2zpCPdqmOQ9vkbRv1435tvnYhRCW1xs6xK7aUlFYkMtQ4+nD3CvOG23YPfqvC7UlO2M17vQsf3bpsltwTuVXpXn8VYjq8AHlH+al+kZksQCfRKp7S2Vkilxen04oLRDqWn8CqD5hzO80gBEePUPz6jsWwFIH7yHdPhADy+KAKByuh+JtaAewiTO5z5GAZlQ2dTVRUf09+bbpyWI5IcsSdFsIwUhmeE6hRZZFreS4Z1jBxCsK0x78YKljUdc6XkS9FErD44s+BnOB8zjEY9wmorWaC9zZJGQmTqcUEgRHiVFfgTl3sZJyMUVZU9/LukTIWQHKfLuvsNnnd/1n9N7G45PeZdwjbV2VVSB6NUeeOQDlxKcs=
+  file:
+    - dist/win-unpacked/${APP_NAME}-win-x64.zip
+    - dist/mac/${APP_NAME}-mac-x64.zip
+    - dist/linux-unpacked/${APP_NAME}-linux-x64.zip
+  skip_cleanup: true
+  on:
+    tags: true
+    branch: master

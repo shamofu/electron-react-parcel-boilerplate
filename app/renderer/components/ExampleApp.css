@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+  
+.App {
+  text-align: center;
+  margin-top: 100;
+}
+  
+img {
+  height: 100px;
+}
