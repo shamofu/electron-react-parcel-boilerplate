@@ -4,9 +4,9 @@ import React from 'react';
 import Renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
-import ExampleApp from '../../components/ExampleApp';
+import ExampleApp from '../../components/exampleApp';
 
-test('root page', () => {
+test('exampleApp component', () => {
   const component = Renderer.create(
     <MemoryRouter><ExampleApp /></MemoryRouter>,
   );

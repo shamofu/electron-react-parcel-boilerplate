@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`root page 1`] = `
+exports[`exampleApp component 1`] = `
 <div
   style={
     Object {
