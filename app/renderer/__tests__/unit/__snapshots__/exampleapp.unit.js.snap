@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`exampleApp component 1`] = `
+exports[`component ExampleApp 1`] = `
 <div
   style={
     Object {

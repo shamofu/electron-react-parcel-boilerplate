@@ -6,7 +6,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 import Start from '../../pages/start';
 
-test('start page', () => {
+test('page Start', () => {
   const component = Renderer.create(
     <MemoryRouter><Start /></MemoryRouter>,
   );
