@@ -9,7 +9,7 @@
     "electron": "electron .",
     "parcel": "parcel app/renderer/index.html -p 1124 -d app/renderer/.parcel/development",
     "parcel:build": "parcel build app/renderer/index.html --public-url ../ -d app/renderer/.parcel/production",
-    "test": "echo \"Error: no test specified\"",
+    "test": "jest",
     "lint": "eslint app",
     "lint:fix": "yarn run lint --fix"
   },
@@ -30,10 +30,12 @@
     "electron-builder": "^19.49.2",
     "eslint": "^4.14.0",
     "eslint-plugin-react": "^7.5.1",
+    "jest": "^22.0.4",
     "parcel-bundler": "^1.3.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "react-test-renderer": "^16.2.0"
   },
   "dependencies": {
     "app-root-path": "^2.0.1",

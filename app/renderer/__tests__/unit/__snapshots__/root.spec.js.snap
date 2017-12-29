@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`root page 1`] = `
+<div
+  style={
+    Object {
+      "marginTop": 100,
+      "textAlign": "center",
+    }
+  }
+>
+  <h3>
+    <a
+      href="/start"
+      onClick={[Function]}
+    >
+      Start
+    </a>
+  </h3>
+</div>
+`;
