@@ -33,9 +33,7 @@ app.on('ready', async () => {
   mainWindow.loadURL(url);
   mainWindow.setMenu(null);
 
-  if (isDev) {
-    mainWindow.webContents.openDevTools();
-  }
+  if (isDev) mainWindow.webContents.openDevTools();
 
 });
 
