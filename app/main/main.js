@@ -30,7 +30,7 @@ app.on('ready', async () => {
   });
 
   const url = isDev ? devPath : prodPath;
-  mainWindow.loadURL(url + '/#/start');
+  mainWindow.loadURL(url + '/#/');
   mainWindow.setMenu(null);
 
   if (isDev) mainWindow.webContents.openDevTools();
