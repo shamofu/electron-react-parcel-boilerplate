@@ -23,7 +23,7 @@
     ]
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/setuptests.js"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
