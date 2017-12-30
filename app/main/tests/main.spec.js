@@ -4,19 +4,16 @@ import getApp from './getapp';
 
 let app;
 
-afterEach(() => {
+afterEach(async () => {
   if (app && app.isRunning()) {
-    return app.stop();
+    return await app.stop();
   }
 });
-beforeEach(() => {
+beforeEach(async () => {
   app = getApp();
-  return app.start();
+  return await app.start();
 });
   
-test('application title', () => {
-  return app.client.getTitle()
-    .then(title => {
-      expect(title).toBe('Electron-React-Parcel-Boilerplate');
-    });
+test('application title', async () => {
+  expect(await app.client.getTitle()).toBe('Electron-React-Parcel-Boilerplate');
 });
