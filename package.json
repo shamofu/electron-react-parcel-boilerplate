@@ -9,7 +9,9 @@
     "electron": "electron .",
     "parcel": "parcel app/renderer/index.html -p 1124 -d app/renderer/.parcel/development",
     "parcel:build": "parcel build app/renderer/index.html --public-url ../ -d app/renderer/.parcel/production",
-    "test": "jest",
+    "test": "yarn run test:main && yarn run test:renderer",
+    "test:main": "yarn run parcel:build && jest app/main",
+    "test:renderer": "jest app/renderer",
     "lint": "eslint app",
     "lint:fix": "yarn run lint --fix"
   },
@@ -18,6 +20,7 @@
   "build": {
     "files": [
       "app/**/*",
+      "!app/main/tests",
       "!app/renderer",
       "app/renderer/.parcel/production/**/*"
     ]
@@ -40,7 +43,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.2.0",
+    "spectron": "^3.7.2"
   },
   "dependencies": {
     "app-root-path": "^2.0.1",

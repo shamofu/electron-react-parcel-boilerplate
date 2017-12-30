@@ -13,7 +13,7 @@ app.on('ready', async () => {
     height: 600,
     show: false,
     webPreferences: {
-      nodeIntegration: false // See #321(https://github.com/parcel-bundler/parcel/issues/321)
+      nodeIntegration: isDev ? false : true // See #321(https://github.com/parcel-bundler/parcel/issues/321)
     }
   });
   
@@ -28,10 +28,10 @@ app.on('ready', async () => {
     protocol: 'file:',
     slashes: true
   });
-  const url = isDev ? devPath : prodPath;
+  const url = (isDev ? devPath : prodPath) + ('ELECTRON_IS_DEV' in process.env ? '' : '/#/');
 
   mainWindow.setMenu(null);
-  mainWindow.loadURL(url + '/#/');
+  mainWindow.loadURL(url);
 });
 
 // Quit the app once all windows are closed
