@@ -4,7 +4,7 @@ import React from 'react';
 import Renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
-import Router from '../../router';
+import Router from '../router';
 
 test('route /', () => {
   const component = Renderer.create(

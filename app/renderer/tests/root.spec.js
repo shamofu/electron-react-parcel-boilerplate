@@ -4,11 +4,11 @@ import React from 'react';
 import Renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
-import Start from '../../pages/start';
+import Root from '../pages/root';
 
-test('page Start', () => {
+test('page Root', () => {
   const component = Renderer.create(
-    <MemoryRouter><Start /></MemoryRouter>,
+    <MemoryRouter><Root /></MemoryRouter>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
