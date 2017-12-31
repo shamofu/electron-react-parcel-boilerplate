@@ -22,8 +22,8 @@
   "build": {
     "files": [
       "app/**",
-      "!app/main/tests",
-      "!app/renderer",
+      "!app/main/tests/**",
+      "!app/renderer/**",
       "app/renderer/.parcel/production/**"
     ]
   },
