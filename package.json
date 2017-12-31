@@ -28,6 +28,7 @@
     ]
   },
   "jest": {
+    "verbose": true,
     "setupTestFrameworkScriptFile": "<rootDir>/setuptests.js",
     "collectCoverageFrom": [
       "app/renderer/**",
