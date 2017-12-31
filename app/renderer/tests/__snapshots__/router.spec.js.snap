@@ -20,6 +20,12 @@ exports[`route / 1`] = `
 </div>
 `;
 
+exports[`route /dummy 1`] = `
+<h1>
+  204 No Content
+</h1>
+`;
+
 exports[`route /start 1`] = `
 <div
   style={

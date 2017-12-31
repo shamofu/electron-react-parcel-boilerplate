@@ -21,3 +21,11 @@ test('route /start', () => {
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+test('route /dummy', () => {
+  const component = Renderer.create(
+    <MemoryRouter initialEntries={ ['/dummy'] }><Router /></MemoryRouter>,
+  );
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
