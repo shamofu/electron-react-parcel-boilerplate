@@ -12,6 +12,7 @@
     "test": "yarn run test:main && yarn run test:renderer",
     "test:main": "yarn run parcel:build && jest app/main",
     "test:renderer": "jest app/renderer",
+    "test:coverage": "yarn test:renderer --coverage",
     "lint": "eslint app",
     "lint:fix": "yarn run lint --fix"
   },
@@ -26,7 +27,14 @@
     ]
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/setuptests.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/setuptests.js",
+    "collectCoverageFrom": [
+      "app/renderer/**",
+      "!app/renderer/index.js",
+      "!app/renderer/tests/**",
+      "!app/renderer/.parcel/**"
+    ],
+    "coverageDirectory": ".coverage"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
