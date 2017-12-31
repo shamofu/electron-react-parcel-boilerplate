@@ -4,26 +4,27 @@
   "description": "A boilerplate for Electron + React + Parcel.",
   "main": "app/main/main.js",
   "scripts": {
-    "start": "concurrently --kill-others \"yarn run parcel\" \"yarn run electron\"",
-    "dist": "yarn run parcel:build && build --dir --x64 --publish=never",
+    "start": "concurrently --kill-others \"yarn parcel\" \"yarn electron\"",
+    "dist": "yarn parcel:build && build --dir --x64 --publish=never",
     "electron": "electron .",
     "parcel": "parcel app/renderer/index.html -p 1124 -d app/renderer/.parcel/development",
     "parcel:build": "parcel build app/renderer/index.html --public-url ../ -d app/renderer/.parcel/production",
-    "test": "yarn run test:main && yarn run test:renderer",
-    "test:main": "yarn run parcel:build && jest app/main",
-    "test:renderer": "jest app/renderer",
-    "test:coverage": "yarn test:renderer --coverage",
+    "test": "yarn test:r && yarn test:m",
+    "test:u": "yarn test:r -u && yarn test:m",
+    "test:c": "yarn test:r --coverage",
+    "test:m": "yarn parcel:build && jest app/main",
+    "test:r": "jest app/renderer",
     "lint": "eslint app",
-    "lint:fix": "yarn run lint --fix"
+    "lint:fix": "yarn lint --fix"
   },
   "author": "shamofu",
   "license": "MIT",
   "build": {
     "files": [
-      "app/**/*",
+      "app/**",
       "!app/main/tests",
       "!app/renderer",
-      "app/renderer/.parcel/production/**/*"
+      "app/renderer/.parcel/production/**"
     ]
   },
   "jest": {
