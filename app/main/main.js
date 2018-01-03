@@ -11,10 +11,7 @@ app.on('ready', async () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    show: false,
-    webPreferences: {
-      nodeIntegration: isDev ? false : true // See #321(https://github.com/parcel-bundler/parcel/issues/321)
-    }
+    show: false
   });
   
   mainWindow.once('ready-to-show', () => {

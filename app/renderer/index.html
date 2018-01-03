@@ -6,5 +6,11 @@
   <body>
     <div id="parcel-root"></div>
   </body>
+  <script>
+    window.nodeRequire = require;
+    delete window.require;
+    delete window.exports;
+    delete window.module;
+  </script>
   <script src="./index.js"></script>
 </html>
