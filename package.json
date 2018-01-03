@@ -9,13 +9,8 @@
     "electron": "electron .",
     "parcel": "parcel app/renderer/index.html -p 1124 -d app/renderer/.parcel/development",
     "parcel:build": "parcel build app/renderer/index.html --public-url ../ -d app/renderer/.parcel/production",
-    "test": "yarn test:renderer && yarn test:main",
-    "test:u": "yarn test:renderer -u && yarn test:main",
-    "test:coverage": "yarn test:renderer --coverage",
-    "test:main": "yarn parcel:build && jest app/main",
-    "test:renderer": "jest app/renderer",
-    "lint": "eslint app",
-    "lint:fix": "yarn lint --fix"
+    "test": "yarn parcel:build && jest",
+    "lint": "eslint app"
   },
   "author": "shamofu",
   "license": "MIT",

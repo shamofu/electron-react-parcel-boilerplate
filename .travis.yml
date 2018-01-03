@@ -14,7 +14,7 @@ before_script:
   - sudo Xvfb :99 -ac -screen 0 1024x768x8 &
   - sleep 3
 script:
-  - yarn test
+  - yarn test --coverage
 before_deploy:
   - yarn run dist -mwl
   - cd dist/win-unpacked && zip -9 -ry ${APP_NAME}-win-x64.zip . && cd ../..
