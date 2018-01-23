@@ -11,8 +11,7 @@ before_install:
 install:
   - yarn install
 before_script:
-  - sudo Xvfb :99 -ac -screen 0 1024x768x8 &
-  - sleep 3
+  - sudo Xvfb :99 -ac -screen 0 1920x1080x8 &
 script:
   - yarn test --coverage
 before_deploy:
