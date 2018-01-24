@@ -44,7 +44,7 @@
     "eslint": "^4.16.0",
     "eslint-plugin-react": "^7.5.1",
     "jest": "^22.1.4",
-    "parcel-bundler": "^1.4.1",
+    "parcel-bundler": "^1.5.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
