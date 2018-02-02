@@ -11,7 +11,7 @@ exports[`route / 1`] = `
 >
   <h3>
     <a
-      href="/start"
+      href="#start"
       onClick={[Function]}
     >
       Start
@@ -21,9 +21,23 @@ exports[`route / 1`] = `
 `;
 
 exports[`route /dummy 1`] = `
-<h1>
-  204 No Content
-</h1>
+<div
+  style={
+    Object {
+      "marginTop": 100,
+      "textAlign": "center",
+    }
+  }
+>
+  <h3>
+    <a
+      href="#start"
+      onClick={[Function]}
+    >
+      Start
+    </a>
+  </h3>
+</div>
 `;
 
 exports[`route /start 1`] = `
@@ -35,15 +49,12 @@ exports[`route /start 1`] = `
     }
   }
 >
-  <h1>
-    Electron + React + Parcel
-  </h1>
   <h3>
     <a
-      href="/"
+      href="#start"
       onClick={[Function]}
     >
-      Back
+      Start
     </a>
   </h3>
 </div>

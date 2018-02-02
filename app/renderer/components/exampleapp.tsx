@@ -1,15 +1,15 @@
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 const styles = {
   App: {
-    textAlign: 'center',
-    marginTop: 100
+    marginTop: 100,
+    textAlign: 'center'
   }
 };
 
-class ExampleApp extends React.Component {
-  render() {
+class ExampleApp extends React.Component<any, any> {
+  public render() {
     return (
       <div style={ styles.App }>
         <h1>Electron + React + Parcel</h1>

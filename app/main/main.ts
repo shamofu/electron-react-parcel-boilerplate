@@ -1,22 +1,22 @@
-// Native
 const { format } = require('url');
 
-// Packages
 const { BrowserWindow, app } = require('electron');
 const isDev = require('electron-is-dev');
 const { resolve } = require('app-root-path');
 
-// Prepare the renderer once the app is ready
 app.on('ready', async () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    show: false
+    show: false,
+    webPreferences: {
+      nodeIntegration: !isDev
+    }
   });
-  
+
   mainWindow.once('ready-to-show', () => {
     mainWindow.show();
-    if (isDev) mainWindow.webContents.openDevTools();
+    if (isDev) { mainWindow.webContents.openDevTools(); }
   });
 
   const devPath = 'http://localhost:1124';
@@ -25,11 +25,10 @@ app.on('ready', async () => {
     protocol: 'file:',
     slashes: true
   });
-  const url = (isDev ? devPath : prodPath) + ('ELECTRON_IS_DEV' in process.env ? '' : '/#/');
+  const url = isDev ? devPath : prodPath;
 
   mainWindow.setMenu(null);
   mainWindow.loadURL(url);
 });
 
-// Quit the app once all windows are closed
 app.on('window-all-closed', app.quit);
