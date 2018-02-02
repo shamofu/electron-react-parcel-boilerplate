@@ -1919,13 +1919,7 @@ dmg-builder@3.1.3:
     js-yaml "^3.10.0"
     parse-color "^1.0.0"
 
-doctrine@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-2.0.2.tgz#68f96ce8efc56cc42651f1faadb4f175273b0075"
-  dependencies:
-    esutils "^2.0.2"
-
-doctrine@^2.1.0:
+doctrine@^2.0.2, doctrine@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-2.1.0.tgz#5cd01fc101621b42c4cd7f5d1a66243716d3f39d"
   dependencies:
@@ -2003,9 +1997,9 @@ ejs@^2.5.7, ejs@~2.5.6:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.5.7.tgz#cc872c168880ae3c7189762fd5ffc00896c9518a"
 
-electron-builder-lib@19.55.2:
-  version "19.55.2"
-  resolved "https://registry.yarnpkg.com/electron-builder-lib/-/electron-builder-lib-19.55.2.tgz#9808495613cd947a0d1abf83b962c16da6402f9c"
+electron-builder-lib@19.55.3:
+  version "19.55.3"
+  resolved "https://registry.yarnpkg.com/electron-builder-lib/-/electron-builder-lib-19.55.3.tgz#06fd10374c3c2315eade512c408f857baa5921e5"
   dependencies:
     "7zip-bin" "^2.4.1"
     asar-integrity "0.2.4"
@@ -2033,15 +2027,15 @@ electron-builder-lib@19.55.2:
     semver "^5.5.0"
     temp-file "^3.1.1"
 
-electron-builder@^19.55.2:
-  version "19.55.2"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-19.55.2.tgz#af709037a97e85fe55cf87e87255bf96333750a3"
+electron-builder@^19.55.3:
+  version "19.55.3"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-19.55.3.tgz#01d3070af8a2eb97d91e6d029f28104b4bf8a068"
   dependencies:
     bluebird-lst "^1.0.5"
     builder-util "4.2.1"
     builder-util-runtime "4.0.3"
     chalk "^2.3.0"
-    electron-builder-lib "19.55.2"
+    electron-builder-lib "19.55.3"
     electron-download-tf "4.3.4"
     fs-extra-p "^4.5.0"
     is-ci "^1.1.0"
@@ -2049,11 +2043,11 @@ electron-builder@^19.55.2:
     read-config-file "2.1.1"
     sanitize-filename "^1.6.1"
     update-notifier "^2.3.0"
-    yargs "^10.1.1"
+    yargs "^11.0.0"
 
-electron-chromedriver@~1.7.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/electron-chromedriver/-/electron-chromedriver-1.7.1.tgz#008c97976007aa4eb18491ee095e94d17ee47610"
+electron-chromedriver@~1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/electron-chromedriver/-/electron-chromedriver-1.8.0.tgz#901714133cf6f6093d365e1f44a52d99624d8241"
   dependencies:
     electron-download "^4.1.0"
     extract-zip "^1.6.5"
@@ -2136,9 +2130,9 @@ electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.28:
   dependencies:
     electron-releases "^2.1.0"
 
-electron@^1.7.11:
-  version "1.7.11"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-1.7.11.tgz#993b6aa79e0e79a7cfcc369f4c813fbd9a0b08d9"
+electron@^1.7.12:
+  version "1.7.12"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-1.7.12.tgz#dcc61a2c1b0c3df25f68b3425379a01abd01190e"
   dependencies:
     "@types/node" "^7.0.18"
     electron-download "^3.0.1"
@@ -2233,13 +2227,13 @@ escodegen@^1.9.0:
   optionalDependencies:
     source-map "~0.5.6"
 
-eslint-plugin-react@^7.5.1:
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.5.1.tgz#52e56e8d80c810de158859ef07b880d2f56ee30b"
+eslint-plugin-react@^7.6.1:
+  version "7.6.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.6.1.tgz#5d0e908be599f0c02fbf4eef0c7ed6f29dff7633"
   dependencies:
-    doctrine "^2.0.0"
+    doctrine "^2.0.2"
     has "^1.0.1"
-    jsx-ast-utils "^2.0.0"
+    jsx-ast-utils "^2.0.1"
     prop-types "^15.6.0"
 
 eslint-scope@^3.7.1:
@@ -3868,7 +3862,7 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-jsx-ast-utils@^2.0.0:
+jsx-ast-utils@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.0.1.tgz#e801b1b39985e20fffc87b40e3748080e2dcac7f"
   dependencies:
@@ -4518,9 +4512,9 @@ pako@~1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.6.tgz#0101211baa70c4bca4a0f63f2206e97b7dfaf258"
 
-parcel-bundler@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/parcel-bundler/-/parcel-bundler-1.5.0.tgz#b02ba5a263c5f6edfb0079a59fe4b7c91bfe2554"
+parcel-bundler@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/parcel-bundler/-/parcel-bundler-1.5.1.tgz#6329100030fe2916cc0ad09bc619a303005382de"
   dependencies:
     babel-core "^6.25.0"
     babel-generator "^6.25.0"
@@ -4558,7 +4552,7 @@ parcel-bundler@^1.5.0:
     tomlify-j0.4 "^3.0.0"
     uglify-es "^3.2.1"
     v8-compile-cache "^1.1.0"
-    worker-farm "^1.4.1"
+    worker-farm "^1.5.2"
     ws "^3.3.3"
 
 parse-asn1@^5.0.0:
@@ -5788,12 +5782,12 @@ spdx-license-ids@^1.0.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57"
 
-spectron@^3.7.2:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/spectron/-/spectron-3.7.2.tgz#86f41306a9b70ed6ee1500f7f7d3adc389afb446"
+spectron@^3.7.3:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/spectron/-/spectron-3.8.0.tgz#122c3562fd7e92b7cdf6f94094aa495b150dfa51"
   dependencies:
     dev-null "^0.1.1"
-    electron-chromedriver "~1.7.1"
+    electron-chromedriver "~1.8.0"
     request "^2.81.0"
     split "^1.0.0"
     webdriverio "^4.8.0"
@@ -6560,7 +6554,7 @@ wordwrap@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
 
-worker-farm@^1.4.1:
+worker-farm@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/worker-farm/-/worker-farm-1.5.2.tgz#32b312e5dc3d5d45d79ef44acc2587491cd729ae"
   dependencies:
@@ -6634,7 +6628,7 @@ yallist@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
 
-yargs-parser@^8.0.0, yargs-parser@^8.1.0:
+yargs-parser@^8.0.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-8.1.0.tgz#f1376a33b6629a5d063782944da732631e966950"
   dependencies:
@@ -6662,23 +6656,6 @@ yargs@^10.0.3:
     which-module "^2.0.0"
     y18n "^3.2.1"
     yargs-parser "^8.0.0"
-
-yargs@^10.1.1:
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-10.1.1.tgz#5fe1ea306985a099b33492001fa19a1e61efe285"
-  dependencies:
-    cliui "^4.0.0"
-    decamelize "^1.1.1"
-    find-up "^2.1.0"
-    get-caller-file "^1.0.1"
-    os-locale "^2.0.0"
-    require-directory "^2.1.1"
-    require-main-filename "^1.0.1"
-    set-blocking "^2.0.0"
-    string-width "^2.0.0"
-    which-module "^2.0.0"
-    y18n "^3.2.1"
-    yargs-parser "^8.1.0"
 
 yargs@^11.0.0:
   version "11.0.0"
