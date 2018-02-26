@@ -3,6 +3,6 @@
     "target": "es5",
     "jsx": "preserve",
     "lib": ["dom", "es6"],
-    "inlineSourceMap": true
+    "sourceMap": true
   }
 }
