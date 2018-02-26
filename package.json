@@ -8,7 +8,7 @@
     "dist": "yarn parcel:build && build --dir --x64 --publish=never",
     "electron": "electron .",
     "parcel": "parcel app/renderer/index.html -p 1124 -d app/renderer/.parcel/development",
-    "parcel:build": "parcel build app/renderer/index.html --public-url ./ -d app/renderer/.parcel/production",
+    "parcel:build": "parcel build app/renderer/index.html --public-url ./ -d app/renderer/.parcel/production --target=electron",
     "test": "yarn parcel:build && jest",
     "lint": "eslint 'app/**/*.js{,x}' && tslint 'app/**/*.ts{,x}'",
     "lint:fix": "eslint 'app/**/*.js{,x}' --fix && tslint 'app/**/*.ts{,x}' --fix"

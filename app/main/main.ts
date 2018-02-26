@@ -8,10 +8,7 @@ app.on('ready', async () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    show: false,
-    webPreferences: {
-      nodeIntegration: !isDev
-    }
+    show: false
   });
 
   mainWindow.once('ready-to-show', () => {
