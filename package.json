@@ -37,7 +37,7 @@
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
-    "globals": { "ts-jest": { "useBabelrc": true } }
+    "globals": { "ts-jest": { "babelConfig": { "presets": ["react", "env"] } } }
   },
   "devDependencies": {
     "@types/jest": "^22.2.0",
