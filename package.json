@@ -12,7 +12,7 @@
     "test": "yarn parcel:build && jest",
     "lint": "tslint app/**/*.ts{,x}"
   },
-  "author": "sham",
+  "author": "shamofu",
   "license": "MIT",
   "build": {
     "files": [
