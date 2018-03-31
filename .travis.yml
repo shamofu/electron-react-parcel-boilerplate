@@ -15,7 +15,7 @@ before_script:
 script:
   - yarn test --coverage
 before_deploy:
-  - yarn run dist -mwl
+  - yarn dist -mwl
   - cd dist/win-unpacked && zip -9 -ry ${APP_NAME}-win-x64.zip . && cd ../..
   - cd dist/mac && zip -9 -ry ${APP_NAME}-mac-x64.zip . && cd ../..
   - cd dist/linux-unpacked && zip -9 -ry ${APP_NAME}-linux-x64.zip . && cd ../..
