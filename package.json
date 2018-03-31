@@ -5,7 +5,7 @@
   "main": "app/main/main.ts",
   "scripts": {
     "start": "run-p -r parcel:launch electron:launch",
-    "dist": "run-s parcel:build electron:build",
+    "dist": "run-s parcel:build \"electron:build {@}\" --",
     "electron:launch": "electron .",
     "electron:build": "build --dir --x64 --publish=never",
     "parcel:launch": "parcel app/renderer/index.html -p 1124 -d app/renderer/.parcel/development",
