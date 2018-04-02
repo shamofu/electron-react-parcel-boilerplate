@@ -1,8 +1,10 @@
 # output
 /dist
 /.cache
-/app/renderer/.parcel
 /.coverage
+/app/renderer/.parcel
+/app/main/main.js
+*.map
 
 # dependencies
 /node_modules
