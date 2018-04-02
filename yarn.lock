@@ -55,9 +55,13 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.1.0":
+"@types/react@*":
   version "16.3.0"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.0.tgz#46e24f7178efe953b564030345f0284121afd79a"
+
+"@types/react@^16.3.1":
+  version "16.3.1"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.1.tgz#6f6aaffaf7dba502ff5ca15e4aa18caee9b04995"
 
 abab@^1.0.4:
   version "1.0.4"
