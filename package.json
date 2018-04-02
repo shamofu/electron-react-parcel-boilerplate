@@ -23,10 +23,10 @@
     "files": [
       "app/**",
       "!app/main/main.ts",
-      "!app/main/main.map",
       "!app/main/tests/**",
       "!app/renderer/**",
-      "app/renderer/.parcel/production/**"
+      "app/renderer/.parcel/production/**",
+      "!app/**/*.map"
     ]
   },
   "jest": {
