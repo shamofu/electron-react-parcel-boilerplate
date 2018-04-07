@@ -1,5 +1,5 @@
-import { Application } from 'spectron';
-import { resolve } from 'app-root-path';
+import { Application } from 'spectron'
+import { resolve } from 'app-root-path'
 
 export default () => (
   new Application({
@@ -11,4 +11,4 @@ export default () => (
       ELECTRON_IS_DEV: '0'
     },
   })
-);
+)

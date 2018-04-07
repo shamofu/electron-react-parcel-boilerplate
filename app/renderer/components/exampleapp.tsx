@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom';
+import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 const styles = {
   App: {
     marginTop: 100,
     textAlign: 'center'
   }
-};
+}
 
 class ExampleApp extends React.Component<any, any> {
   public render() {
@@ -15,8 +15,8 @@ class ExampleApp extends React.Component<any, any> {
         <h1>Electron + React + Parcel</h1>
         <h3><Link to='/'>Back</Link></h3>
       </div>
-    );
+    )
   }
 }
 
-export default ExampleApp;
+export default ExampleApp
