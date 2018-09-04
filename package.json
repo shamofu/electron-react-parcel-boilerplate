@@ -9,10 +9,10 @@
     "electron:launch": "run-s parcel:main electron:start",
     "electron:start": "electron .",
     "electron:build": "build --dir --x64 --publish=never",
-    "parcel:launch": "parcel app/renderer/index.html -p 1124 -d app/renderer/.parcel/development",
+    "parcel:launch": "parcel app/renderer/index.html --port 1124 --out-dir app/renderer/.parcel/development",
     "parcel:build": "run-s parcel:main parcel:renderer",
-    "parcel:main": "parcel build app/main/main.ts -d app/main --out-file=main --target=electron",
-    "parcel:renderer": "parcel build app/renderer/index.html --public-url ./ -d app/renderer/.parcel/production",
+    "parcel:main": "parcel build app/main/main.ts --out-dir app/main --out-file main --target electron",
+    "parcel:renderer": "parcel build app/renderer/index.html --public-url ./ --out-dir app/renderer/.parcel/production",
     "test": "run-s parcel:build \"test:jest {@}\" --",
     "test:jest": "jest",
     "lint": "tslint app/**/*.ts{,x}"
