@@ -12,6 +12,7 @@ exports[`route / 1`] = `
   <h3>
     <a
       href="#start"
+      id="start"
       onClick={[Function]}
     >
       Start
@@ -32,6 +33,7 @@ exports[`route /dummy 1`] = `
   <h3>
     <a
       href="#start"
+      id="start"
       onClick={[Function]}
     >
       Start
@@ -52,6 +54,7 @@ exports[`route /start 1`] = `
   <h3>
     <a
       href="#start"
+      id="start"
       onClick={[Function]}
     >
       Start

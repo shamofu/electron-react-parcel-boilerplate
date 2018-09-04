@@ -17,5 +17,5 @@ test('application title', async () => {
 })
 
 test('go to Start', async () => {
-  expect(await app.client.element('a').click().element('h1').getText()).toBe('Electron + React + Parcel')
+  expect(await app.client.element('a#start').click().element('h1').getText()).toBe('Electron + React + Parcel')
 })

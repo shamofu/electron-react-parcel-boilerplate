@@ -12,6 +12,7 @@ exports[`page Root 1`] = `
   <h3>
     <a
       href="/start"
+      id="start"
       onClick={[Function]}
     >
       Start
