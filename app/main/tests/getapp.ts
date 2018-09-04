@@ -9,6 +9,6 @@ export default () => (
     waitTimeout: 10000,
     env: {
       ELECTRON_IS_DEV: '0'
-    },
+    }
   })
 )
