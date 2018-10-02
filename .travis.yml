@@ -4,8 +4,8 @@ os: osx
 osx_image: xcode10
 env:
   global:
-  - APP_NAME=electron-react-parcel-boilerplate
-  - CSC_IDENTITY_AUTO_DISCOVERY=false
+    - APP_NAME=electron-react-parcel-boilerplate
+    - CSC_IDENTITY_AUTO_DISCOVERY=false
 before_install:
   - brew update
 install:
