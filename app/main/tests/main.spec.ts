@@ -1,5 +1,6 @@
 import getApp from './getapp'
 
+jest.setTimeout(60000)
 let app
 
 afterEach(async () => {
