@@ -50,7 +50,6 @@
       "artifactName": "${productName}-linux.${ext}"
     },
     "directories": {
-      "buildResources": "resources",
       "output": "release"
     }
   },
