@@ -2,7 +2,7 @@
   "name": "electron-react-parcel-boilerplate",
   "version": "0.4.4",
   "description": "A boilerplate for Electron + React + Parcel.",
-  "main": "app/main/main.js",
+  "main": "app/main/.parcel/main.js",
   "scripts": {
     "start": "run-p -r parcel:launch electron:launch",
     "dist": "run-s parcel:build \"electron:build {@}\" --",
@@ -11,7 +11,7 @@
     "electron:build": "build --dir --x64 --publish=never",
     "parcel:launch": "parcel app/renderer/index.html --port 1124 --out-dir app/renderer/.parcel/development",
     "parcel:build": "run-s parcel:main parcel:renderer",
-    "parcel:main": "parcel build app/main/main.ts --out-dir app/main --out-file main --target electron",
+    "parcel:main": "parcel build app/main/main.ts --out-dir app/main/.parcel --out-file main --target electron",
     "parcel:renderer": "parcel build app/renderer/index.html --public-url ./ --out-dir app/renderer/.parcel/production",
     "test": "run-s parcel:build \"test:jest {@}\" --",
     "test:jest": "jest",
