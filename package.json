@@ -20,7 +20,7 @@
   "author": "shamofu",
   "license": "MIT",
   "build": {
-    "productName": "shamofu",
+    "productName": "ElectronReactParcel",
     "appId": "org.shamofu.electronReactParcelBoilerplate",
     "files": [
       "app/**",
