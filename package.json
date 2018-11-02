@@ -21,7 +21,7 @@
   "license": "MIT",
   "build": {
     "productName": "ElectronReactParcel",
-    "appId": "org.shamofu.electronReactParcelBoilerplate",
+    "appId": "org.shamofu.ElectronReactParcel",
     "files": [
       "app/**",
       "!app/main/main.ts",
