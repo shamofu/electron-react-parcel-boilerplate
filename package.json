@@ -2,7 +2,7 @@
   "name": "electron-react-parcel-boilerplate",
   "version": "0.4.4",
   "description": "A boilerplate for Electron + React + Parcel.",
-  "main": "app/main/main.js",
+  "main": "app/main/.parcel/main.js",
   "scripts": {
     "start": "run-p -r parcel:launch electron:launch",
     "dist": "run-s parcel:build \"electron:build {@}\" --",
@@ -11,7 +11,7 @@
     "electron:build": "build --dir --x64 --publish=never",
     "parcel:launch": "parcel app/renderer/index.html --port 1124 --out-dir app/renderer/.parcel/development",
     "parcel:build": "run-s parcel:main parcel:renderer",
-    "parcel:main": "parcel build app/main/main.ts --out-dir app/main --out-file main --target electron",
+    "parcel:main": "parcel build app/main/main.ts --out-dir app/main/.parcel --out-file main --target electron",
     "parcel:renderer": "parcel build app/renderer/index.html --public-url ./ --out-dir app/renderer/.parcel/production",
     "test": "run-s parcel:build \"test:jest {@}\" --",
     "test:jest": "jest",
@@ -20,6 +20,8 @@
   "author": "shamofu",
   "license": "MIT",
   "build": {
+    "productName": "ElectronReactParcel",
+    "appId": "org.shamofu.ElectronReactParcel",
     "files": [
       "app/**",
       "!app/main/main.ts",
@@ -27,7 +29,29 @@
       "!app/renderer/**",
       "app/renderer/.parcel/production/**",
       "!app/**/*.map"
-    ]
+    ],
+    "mac": {
+      "target": [
+        "zip"
+      ],
+      "artifactName": "${productName}-mac.${ext}"
+    },
+    "win": {
+      "target": [
+        "zip"
+      ],
+      "artifactName": "${productName}-win.${ext}"
+    },
+    "linux": {
+      "target": [
+        "zip"
+      ],
+      "category": "Development",
+      "artifactName": "${productName}-linux.${ext}"
+    },
+    "directories": {
+      "output": "release"
+    }
   },
   "jest": {
     "verbose": true,
@@ -42,30 +66,41 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
-    "globals": { "ts-jest": { "babelConfig": true } }
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "babelConfig": true
+      }
+    }
   },
   "devDependencies": {
-    "@types/jest": "^23.3.7",
+    "@types/jest": "^23.3.9",
     "@types/react": "^16.4.18",
     "@types/react-dom": "^16.0.9",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "electron": "^3.0.5",
-    "electron-builder": "^20.28.4",
+    "electron": "^3.0.7",
+    "electron-builder": "^20.29.0",
     "jest": "^23.6.0",
     "npm-run-all": "^4.1.3",
     "parcel-bundler": "^1.10.3",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-router-dom": "^4.3.1",
-    "react-test-renderer": "^16.5.2",
+    "react-test-renderer": "^16.6.0",
     "spectron": "^5.0.0",
     "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.1.3"
+    "typescript": "^3.1.6"
   },
   "dependencies": {
     "app-root-path": "^2.1.0",

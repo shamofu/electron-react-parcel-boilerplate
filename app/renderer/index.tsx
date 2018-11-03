@@ -6,7 +6,7 @@ import Router from './router'
 const render = (Component) => {
   ReactDOM.render(
     <Component />,
-    document.getElementById('parcel-root')
+    document.getElementById('root')
   )
 }
 

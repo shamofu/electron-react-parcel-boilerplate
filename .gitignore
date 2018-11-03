@@ -1,10 +1,10 @@
 # output
-/dist
 /.cache
 /.coverage
 /app/renderer/.parcel
-/app/main/main.js
+/app/main/.parcel
 *.map
+/release
 
 # dependencies
 /node_modules
