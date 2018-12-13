@@ -8,7 +8,7 @@
     "dist": "run-s parcel:build \"electron:build {@}\" --",
     "electron:launch": "run-s parcel:main electron:start",
     "electron:start": "electron .",
-    "electron:build": "build --dir --x64 --publish=never",
+    "electron:build": "build --x64 --publish=never",
     "parcel:launch": "parcel app/renderer/index.html --port 1124 --out-dir app/renderer/.parcel/development",
     "parcel:build": "run-s parcel:main parcel:renderer",
     "parcel:main": "parcel build app/main/main.ts --out-dir app/main/.parcel --out-file main --target electron",
