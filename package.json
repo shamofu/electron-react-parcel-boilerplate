@@ -73,12 +73,7 @@
       "jsx",
       "json",
       "node"
-    ],
-    "globals": {
-      "ts-jest": {
-        "babelConfig": true
-      }
-    }
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
