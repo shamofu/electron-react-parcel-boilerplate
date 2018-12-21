@@ -1,10 +1,14 @@
 {
   "presets": [
-    "react",
-    ["env", {
-      "targets": {
-        "electron": "4.0"
+    "@babel/preset-react",
+    "@babel/preset-typescript",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "electron": "4.0"
+        }
       }
-    }]
+    ]
   ]
 }
