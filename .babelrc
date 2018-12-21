@@ -3,7 +3,7 @@
     "react",
     ["env", {
       "targets": {
-        "electron": "3.0"
+        "electron": "4.0"
       }
     }]
   ]
