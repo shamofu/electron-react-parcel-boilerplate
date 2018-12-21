@@ -15,7 +15,7 @@ jobs:
     displayName: Install Node.js
   - script: yarn
     displayName: Install dependencies
-  - script: yarn test --coverage
+  - script: yarn test --coverage --detectOpenHandles
     displayName: Run tests
 
 - job: macOS
