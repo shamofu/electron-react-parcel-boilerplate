@@ -6,7 +6,7 @@
       "@babel/preset-env",
       {
         "targets": {
-          "electron": "4.0"
+          "electron": "3.0"
         }
       }
     ]
