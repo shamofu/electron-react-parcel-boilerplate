@@ -61,7 +61,6 @@
       "!app/renderer/tests/**",
       "!app/renderer/.parcel/**"
     ],
-    "coverageDirectory": ".coverage",
     "transform": {
       "^.+\\.tsx?$": "babel-jest"
     },

@@ -1,6 +1,6 @@
 # output
 /.cache
-/.coverage
+/coverage
 /app/renderer/.parcel
 /app/main/.parcel
 *.map
