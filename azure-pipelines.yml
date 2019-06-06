@@ -8,6 +8,8 @@ jobs:
         node_version: 8.x
       node_10.x:
         node_version: 10.x
+      node_12.x:
+        node_version: 12.x
   steps:
   - task: NodeTool@0
     inputs:
@@ -27,6 +29,8 @@ jobs:
         node_version: 8.x
       node_10.x:
         node_version: 10.x
+      node_12.x:
+        node_version: 12.x
   steps:
   - task: NodeTool@0
     inputs:
@@ -46,6 +50,8 @@ jobs:
         node_version: 8.x
       node_10.x:
         node_version: 10.x
+      node_12.x:
+        node_version: 12.x
   steps:
   - task: NodeTool@0
     inputs:
