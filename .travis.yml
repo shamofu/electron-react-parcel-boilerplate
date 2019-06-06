@@ -14,7 +14,7 @@ before_script:
 script:
   - yarn test --coverage
 before_deploy:
-  - yarn dist -mwl
+  - yarn release -mwl
 deploy:
   provider: releases
   api_key:

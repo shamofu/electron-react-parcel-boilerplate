@@ -5,7 +5,7 @@
   "main": "app/main/.parcel/main.js",
   "scripts": {
     "start": "run-s main:build watch",
-    "dist": "run-s parcel:build \"electron:build {@}\" --",
+    "release": "run-s parcel:build \"electron:build {@}\" --",
     "watch": "run-p -r parcel:watch electron:start",
     "electron:start": "nodemon --watch app/main/.parcel --exec \"electron .\"",
     "electron:build": "build --x64 --publish=never",
