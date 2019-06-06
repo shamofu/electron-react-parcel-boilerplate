@@ -8,8 +8,6 @@ jobs:
         node_version: 8.x
       node_10.x:
         node_version: 10.x
-      node_12.x:
-        node_version: 12.x
   steps:
   - task: NodeTool@0
     inputs:
@@ -22,7 +20,7 @@ jobs:
 
 - job: macOS
   pool:
-    vmImage: macOS-10.13
+    vmImage: macOS-10.14
   strategy:
     matrix:
       node_8.x:
