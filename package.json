@@ -86,7 +86,7 @@
     "@types/react-dom": "^16.8.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.8.0",
-    "electron": "^4.2.5",
+    "electron": "^4.2.4",
     "electron-builder": "^20.44.4",
     "jest": "^24.8.0",
     "nodemon": "^1.19.1",
