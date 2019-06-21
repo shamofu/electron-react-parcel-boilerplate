@@ -1,6 +1,6 @@
 {
   "name": "electron-react-parcel-boilerplate",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "A boilerplate for Electron + React + Parcel.",
   "main": "app/main/.parcel/main.js",
   "scripts": {
