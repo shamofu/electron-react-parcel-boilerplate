@@ -15,7 +15,7 @@ jobs:
     steps:
       - task: NodeTool@0
         inputs:
-        versionSpec: $(node_version)
+          versionSpec: $(node_version)
         displayName: Install Node.js
       - script: yarn
         displayName: Install dependencies
