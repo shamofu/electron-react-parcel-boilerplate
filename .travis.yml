@@ -9,8 +9,6 @@ before_install:
   - brew update
 install:
   - yarn install
-before_script:
-  - sudo Xvfb :99 -ac -screen 0 1920x1080x8 &
 script:
   - yarn test --coverage
 before_deploy:
