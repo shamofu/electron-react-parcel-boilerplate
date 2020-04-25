@@ -77,10 +77,10 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.3.3",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
     "@types/jest": "^25.2.1",
     "@types/react": "^16.8.22",
     "@types/react-dom": "^16.8.4",
@@ -99,7 +99,7 @@
     "spectron": "^7.0.0",
     "tslint": "^5.18.0",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
