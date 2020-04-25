@@ -1,11 +1,9 @@
 jobs:
   - job: Windows
     pool:
-      vmImage: win1803
+      vmImage: windows-2019
     strategy:
       matrix:
-        node_8.x:
-          node_version: 8.x
         node_10.x:
           node_version: 10.x
         node_12.x:
@@ -22,11 +20,9 @@ jobs:
 
   - job: macOS
     pool:
-      vmImage: macOS-10.14
+      vmImage: macOS-10.15
     strategy:
       matrix:
-        node_8.x:
-          node_version: 8.x
         node_10.x:
           node_version: 10.x
         node_12.x:
@@ -43,11 +39,9 @@ jobs:
 
   - job: Linux
     pool:
-      vmImage: ubuntu-16.04
+      vmImage: ubuntu-18.04
     strategy:
       matrix:
-        node_8.x:
-          node_version: 8.x
         node_10.x:
           node_version: 10.x
         node_12.x:
