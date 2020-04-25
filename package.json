@@ -4,9 +4,11 @@
   "description": "A boilerplate for Electron + React + Parcel.",
   "main": "app/main/.parcel/main.js",
   "scripts": {
-    "start": "run-s main:build watch",
+    "start": "run-s main:build electron:watch",
+    "test": "run-s parcel:build \"test:jest {@}\" --",
+    "lint": "tslint app/**/*.ts{,x}",
     "release": "run-s parcel:build \"electron:build {@}\" --",
-    "watch": "run-p -r parcel:watch electron:start",
+    "electron:watch": "run-p -r parcel:watch electron:start",
     "electron:start": "nodemon --watch app/main/.parcel --exec \"electron .\"",
     "electron:build": "electron-builder --x64 --publish=never",
     "parcel:watch": "run-p -r main:watch renderer:watch",
@@ -15,9 +17,7 @@
     "parcel:build": "run-s main:build renderer:build",
     "main:build": "parcel build app/main/main.ts --out-dir app/main/.parcel --out-file main --target electron",
     "renderer:build": "parcel build app/renderer/index.html --public-url ./ --out-dir app/renderer/.parcel/production",
-    "test": "run-s parcel:build \"test:jest {@}\" --",
-    "test:jest": "jest",
-    "lint": "tslint app/**/*.ts{,x}"
+    "test:jest": "jest"
   },
   "author": "shamofu",
   "license": "MIT",
