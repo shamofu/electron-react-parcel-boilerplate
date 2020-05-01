@@ -2,6 +2,7 @@ language: node_js
 node_js: lts/*
 os: osx
 osx_image: xcode11.3
+cache: false
 env:
   global:
     - CSC_IDENTITY_AUTO_DISCOVERY=false
