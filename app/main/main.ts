@@ -4,7 +4,8 @@ const { BrowserWindow, app } = require('electron')
 const isDev = require('electron-is-dev')
 const { resolve } = require('app-root-path')
 
-app.on('ready', async () => {
+
+function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
@@ -26,6 +27,18 @@ app.on('ready', async () => {
 
   mainWindow.setMenu(null)
   mainWindow.loadURL(url)
+}
+
+app.whenReady().then(createWindow)
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
 })
 
-app.on('window-all-closed', app.quit)
+app.on('activate', () => {
+  if (BrowserWindow.getAllWindows().length === 0) {
+    createWindow()
+  }
+})
