@@ -3,11 +3,9 @@ import getApp from './getapp'
 jest.setTimeout(60000)
 let app
 
-test('dummy', () => {true})
-/* not working after updating
 afterEach(async () => {
   if (app && app.isRunning()) {
-    return await app.stop()
+    return await app.stop() // https://github.com/electron-userland/spectron/issues/693
   }
 })
 beforeEach(async () => {
@@ -20,6 +18,8 @@ test('application title', async () => {
 })
 
 test('go to Start', async () => {
-  expect(await app.client.element('a#start').click().element('h1').getText()).toBe('Electron + React + Parcel')
+  const foo = await app.client.$('a#start')
+  await foo.click()
+  const bar = await app.client.$('h1')
+  expect(await bar.getText()).toBe('Electron + React + Parcel')
 })
-*/
