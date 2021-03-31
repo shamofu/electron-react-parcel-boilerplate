@@ -5,7 +5,7 @@ let app
 
 afterEach(async () => {
   if (app && app.isRunning()) {
-    return await app.stop() // https://github.com/electron-userland/spectron/issues/693
+    return await app.stop()
   }
 })
 beforeEach(async () => {
