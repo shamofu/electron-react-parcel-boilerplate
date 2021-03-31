@@ -4,13 +4,11 @@ on: [push, pull_request]
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
     strategy:
       matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
         node-version: [10.x, 12.x, 14.x, 15.x]
-
+    runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -18,4 +16,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
-    - run: yarn test
+    - uses: GabrielBB/xvfb-action@v1
+      with:
+        run: yarn test
