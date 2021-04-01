@@ -5,6 +5,7 @@ on: [push, pull_request]
 jobs:
   test:
     name: Test
+    if: always()
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
