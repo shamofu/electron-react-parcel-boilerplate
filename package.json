@@ -2,6 +2,7 @@
   "name": "electron-react-parcel-boilerplate",
   "version": "0.9.0",
   "description": "A boilerplate for Electron + React + Parcel.",
+  "private": "true",
   "main": "app/main/.parcel/main.js",
   "scripts": {
     "start": "run-s main:build electron:watch",
