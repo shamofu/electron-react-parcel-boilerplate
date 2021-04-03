@@ -2,26 +2,34 @@
   "name": "electron-react-parcel-boilerplate",
   "version": "0.9.0",
   "description": "A boilerplate for Electron + React + Parcel.",
+  "author": "shamofu",
+  "license": "MIT",
   "private": "true",
   "main": "app/main/.parcel/main.js",
+  "renderer": "app/renderer/.parcel/index.html",
+  "targets": {
+    "main": {
+      "context": "electron-main"
+    },
+    "renderer": {
+      "context": "browser"
+    }
+  },
   "scripts": {
     "start": "run-s main:build electron:watch",
     "test": "run-s parcel:build \"test:jest {@}\" --",
-    "lint": "tslint app/**/*.ts{,x}",
     "release": "run-s parcel:build \"electron:build {@}\" --",
     "electron:watch": "run-p -r parcel:watch electron:start",
     "electron:start": "nodemon --watch app/main/.parcel --exec \"electron .\"",
     "electron:build": "electron-builder --x64 --publish=never",
-    "parcel:watch": "run-p -r main:watch renderer:watch",
-    "main:watch": "parcel watch app/main/main.ts --out-dir app/main/.parcel --out-file main --target electron",
-    "renderer:watch": "parcel app/renderer/index.html --port 1124 --out-dir app/renderer/.parcel/development",
     "parcel:build": "run-s main:build renderer:build",
-    "main:build": "parcel build app/main/main.ts --out-dir app/main/.parcel --out-file main --target electron",
-    "renderer:build": "parcel build app/renderer/index.html --public-url ./ --out-dir app/renderer/.parcel/production",
+    "parcel:watch": "run-p -r main:watch renderer:watch",
+    "main:build": "parcel build app/main/main.ts --target=main",
+    "main:watch": "parcel watch app/main/main.ts --target=main",
+    "renderer:build": "parcel build app/renderer/index.html --public-url ./ --target=renderer",
+    "renderer:watch": "parcel serve app/renderer/index.html --port 1124 --target=renderer",
     "test:jest": "jest"
   },
-  "author": "shamofu",
-  "license": "MIT",
   "build": {
     "productName": "ElectronReactParcel",
     "appId": "org.shamofu.ElectronReactParcel",
@@ -30,7 +38,7 @@
       "!app/main/main.ts",
       "!app/main/tests/**",
       "!app/renderer/**",
-      "app/renderer/.parcel/production/**",
+      "app/renderer/.parcel/**",
       "!app/**/*.map"
     ],
     "mac": {
@@ -91,14 +99,12 @@
     "jest": "^26.6.3",
     "nodemon": "^2.0.7",
     "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.12.4",
+    "parcel": "^2.0.0-beta.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-test-renderer": "^17.0.2",
     "spectron": "^14.0.0",
-    "tslint": "^6.1.1",
-    "tslint-react": "^5.0.0",
     "typescript": "^4.2.3"
   },
   "dependencies": {

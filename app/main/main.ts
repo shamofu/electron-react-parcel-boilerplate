@@ -19,7 +19,7 @@ function createWindow() {
 
   const devPath = 'http://localhost:1124'
   const prodPath = format({
-    pathname: resolve('app/renderer/.parcel/production/index.html'),
+    pathname: resolve('app/renderer/.parcel/index.html'),
     protocol: 'file:',
     slashes: true
   })
