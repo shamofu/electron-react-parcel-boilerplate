@@ -5,11 +5,11 @@ on: [push, pull_request]
 jobs:
   test:
     name: Test
-    if: always()
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
         node-version: [12.x, 14.x, 15.x]
+      fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout the source
