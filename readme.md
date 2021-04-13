@@ -1,4 +1,4 @@
-# Electron-React-Parcel-Boilerplate
+# Electron + React + Parcel Boilerplate
 [![Dependencies Status](https://img.shields.io/david/shamofu/electron-react-parcel-boilerplate.svg?style=flat-square)](https://david-dm.org/shamofu/electron-react-parcel-boilerplate)
 [![DevDependencies Status](https://img.shields.io/david/dev/shamofu/electron-react-parcel-boilerplate.svg?style=flat-square)](https://david-dm.org/shamofu/electron-react-parcel-boilerplate?type=dev)
 
