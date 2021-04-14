@@ -26,7 +26,7 @@
     "parcel:watch": "run-p -r main:watch renderer:watch",
     "main:build": "parcel build app/main/main.ts --target main",
     "main:watch": "parcel watch app/main/main.ts --target main",
-    "renderer:build": "parcel build app/renderer/index.html --public-url . --target renderer",
+    "renderer:build": "parcel build app/renderer/index.html --public-url ./ --target renderer",
     "renderer:watch": "parcel serve app/renderer/index.html --port 1124 --target renderer",
     "test:jest": "jest"
   },
