@@ -6,7 +6,7 @@ let app;
 
 test('dummy', () => {
   expect(true).toBe(true);
-})
+});
 
 /* Doesn't work.
 beforeAll(async () => {
