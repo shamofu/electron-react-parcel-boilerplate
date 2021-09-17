@@ -1,44 +1,49 @@
-const { format } = require('url')
+import { format } from 'url';
 
-const { BrowserWindow, app } = require('electron')
-const isDev = require('electron-is-dev')
-const { resolve } = require('app-root-path')
+import { BrowserWindow, app } from 'electron';
+import isDev from 'electron-is-dev';
+import { resolve } from 'app-root-path';
 
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    show: false
-  })
+    show: false,
+    webPreferences: {
+      nativeWindowOpen: true,
+    },
+  });
 
   mainWindow.once('ready-to-show', () => {
-    mainWindow.show()
-    if (isDev) { mainWindow.webContents.openDevTools() }
-  })
+    mainWindow.show();
+    if (isDev) { mainWindow.webContents.openDevTools(); }
+  });
 
-  const devPath = 'http://localhost:1124'
+  const devPath = 'http://localhost:1124';
   const prodPath = format({
     pathname: resolve('app/renderer/.parcel/index.html'),
     protocol: 'file:',
-    slashes: true
-  })
-  const url = isDev ? devPath : prodPath
+    slashes: true,
+  });
+  const url = isDev ? devPath : prodPath;
 
-  mainWindow.setMenu(null)
-  mainWindow.loadURL(url)
+  mainWindow.setMenu(null);
+  mainWindow.loadURL(url);
 }
 
-app.whenReady().then(createWindow)
+app.whenReady().then(() => {
+  createWindow();
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit()
+    app.quit();
   }
-})
+});
 
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow()
+    createWindow();
   }
-})
+});

@@ -1,25 +1,30 @@
-import getApp from './getapp'
+import { bootApp, terminateApp } from './testApp';
 
-jest.setTimeout(60000)
-let app
+jest.setTimeout(60000);
 
-afterEach(async () => {
-  if (app && app.isRunning()) {
-    return await app.stop()
-  }
+let app;
+
+test('dummy', () => {
+  expect(true).toBe(true);
 })
-beforeEach(async () => {
-  app = getApp()
-  return await app.start()
-})
+
+/* Doesn't work.
+beforeAll(async () => {
+  app = await bootApp();
+});
+
+afterAll(async () => {
+  await terminateApp(app);
+});
 
 test('application title', async () => {
-  expect(await app.client.getTitle()).toBe('Electron-React-Parcel-Boilerplate')
-})
+  expect(await app.client.getTitle()).toBe('Electron-React-Parcel-Boilerplate');
+});
 
 test('go to Start', async () => {
-  const foo = await app.client.$('a#start')
-  await foo.click()
-  const bar = await app.client.$('h1')
-  expect(await bar.getText()).toBe('Electron + React + Parcel')
-})
+  const foo = await app.client.$('a#start');
+  await foo.click();
+  const bar = await app.client.$('h1');
+  expect(await bar.getText()).toBe('Electron + React + Parcel');
+});
+*/

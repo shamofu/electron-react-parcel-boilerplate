@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
-        node-version: [12.x, 14.x, 15.x]
+        node-version: [12.x, 14.x, 16.x]
       fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
@@ -20,6 +20,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install the dependencies
         run: yarn install
+      - name: Lint
+        run: yarn lint
       - name: Run the tests
         uses: GabrielBB/xvfb-action@v1
         with:

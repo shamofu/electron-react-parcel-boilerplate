@@ -1,8 +1,11 @@
-import * as React from 'react'
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import * as React from 'react';
+import { HashRouter, Route, Switch } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
-import Root from './pages/root'
-import Start from './pages/start'
+import Root from './pages/root';
+import Start from './pages/start';
+
+const history = createBrowserHistory();
 
 export default () => {
   return (
@@ -13,5 +16,5 @@ export default () => {
         <Route component={() => <h1>204 No Content</h1>} />
       </Switch>
     </HashRouter>
-  )
-}
+  );
+};

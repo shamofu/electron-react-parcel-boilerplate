@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "target": "esnext",
-    "jsx": "preserve",
-    "sourceMap": true,
-    "moduleResolution": "node"
-  }
-}
