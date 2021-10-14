@@ -1,3 +1,5 @@
+import { jest } from '@jest/globals';
+
 import { bootApp, terminateApp } from './testApp';
 
 jest.setTimeout(60000);
@@ -8,7 +10,6 @@ test('dummy', () => {
   expect(true).toBe(true);
 });
 
-/* Doesn't work.
 beforeAll(async () => {
   app = await bootApp();
 });
@@ -27,4 +28,3 @@ test('go to Start', async () => {
   const bar = await app.client.$('h1');
   expect(await bar.getText()).toBe('Electron + React + Parcel');
 });
-*/

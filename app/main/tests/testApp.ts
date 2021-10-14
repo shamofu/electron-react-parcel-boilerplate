@@ -1,6 +1,7 @@
 import { Application } from 'spectron';
 import electron from 'electron';
-import { resolve } from 'app-root-path';
+import arp from 'app-root-path';
+const { resolve } = arp;
 
 export async function bootApp() {
   const app = new Application({

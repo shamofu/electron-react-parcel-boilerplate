@@ -4,43 +4,34 @@
   "description": "A boilerplate for Electron + React + Parcel.",
   "author": "shamofu",
   "license": "MIT",
-  "private": "true",
-  "main": "app/main/.parcel/main.js",
-  "renderer": "app/renderer/.parcel/index.html",
+  "private": true,
+  "main": "dist/backend/main.js",
   "targets": {
-    "main": {
-      "context": "electron-main"
+    "frontend": {
+      "source": "app/renderer/index.html",
+      "context": "browser",
+      "publicUrl": "./"
     },
-    "renderer": {
-      "context": "browser"
+    "backend": {
+      "source": "app/main/main.ts",
+      "context": "electron-main"
     }
   },
   "scripts": {
-    "start": "run-s main:build electron:watch",
-    "lint": "eslint \"app/**/*.{ts,tsx}\"",
-    "test": "run-s parcel:build \"test:jest {@}\" --",
-    "release": "run-s parcel:build \"electron:build {@}\" --",
-    "electron:watch": "run-p -r parcel:watch electron:start",
-    "electron:start": "electron .",
-    "electron:build": "electron-builder --x64 --publish=never",
-    "parcel:build": "run-s main:build renderer:build",
-    "parcel:watch": "run-p -r main:watch renderer:watch",
-    "main:build": "parcel build app/main/main.ts --target main",
-    "main:watch": "parcel watch app/main/main.ts --target main",
-    "renderer:build": "parcel build app/renderer/index.html --public-url ./ --target renderer",
-    "renderer:watch": "parcel serve app/renderer/index.html --port 1124 --target renderer",
-    "test:jest": "jest"
+    "dev": "run-p b:watch f:serve elc",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "build": "parcel build",
+    "release": "electron-builder --x64 --publish=never",
+    "elc": "electron dist/backend/main.js",
+    "f:serve": "parcel serve --target frontend",
+    "b:watch": "parcel watch --target backend",
+    "lint": "eslint"
   },
   "build": {
     "productName": "ElectronReactParcel",
     "appId": "org.shamofu.ElectronReactParcel",
     "files": [
-      "app/**",
-      "!app/main/main.ts",
-      "!app/main/tests/**",
-      "!app/renderer/**",
-      "app/renderer/.parcel/**",
-      "!app/**/*.map"
+      "dist"
     ],
     "mac": {
       "target": [
@@ -74,8 +65,13 @@
       "!app/renderer/.parcel/**"
     ],
     "transform": {
-      "^.+\\.tsx?$": "babel-jest"
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
     },
+    "extensionsToTreatAsEsm": [
+      ".ts",
+      ".tsx"
+    ],
+    "testEnvironment": "jsdom",
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
@@ -87,31 +83,34 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/eslint-parser": "^7.15.4",
-    "@babel/preset-env": "^7.15.6",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
-    "@types/jest": "^27.0.1",
-    "@types/react": "^17.0.21",
+    "@jest/globals": "^27.2.5",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.2",
+    "@types/react": "^17.0.29",
     "@types/react-dom": "^17.0.9",
-    "babel-jest": "^27.2.0",
-    "electron": "^14.0.1",
-    "electron-builder": "^22.11.7",
+    "asar": "^3.1.0",
+    "cross-env": "^7.0.3",
+    "electron": "^13.5.2",
+    "electron-builder": "^22.14.5",
     "eslint": "^7.32.0",
-    "eslint-plugin-jest": "^24.4.0",
-    "jest": "^27.2.0",
+    "eslint-plugin-jest": "^25.0.5",
+    "eslint-plugin-testing-library": "^4.12.4",
+    "jest": "^27.2.5",
     "npm-run-all": "^4.1.5",
-    "parcel": "^2.0.0-rc.0",
+    "parcel": "^2.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.3.0",
     "react-test-renderer": "^17.0.2",
     "spectron": "^15.0.0",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.4"
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
     "electron-is-dev": "^2.0.0"
-  }
+  },
+  "packageManager": "yarn@3.0.2"
 }

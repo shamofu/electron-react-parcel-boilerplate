@@ -1,5 +1,5 @@
-import * as React from 'react';
-import * as Renderer from 'react-test-renderer';
+import React from 'react';
+import Renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
 import ExampleApp from '../components/exampleapp';
