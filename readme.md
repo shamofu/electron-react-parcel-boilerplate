@@ -17,9 +17,9 @@ $ yarn dev
 You will edit the files under `renderer` basically, or under `main` if you want to configure Electron itself.
 
 ## Deploy your application
-The commands below pack your application.
+The commands below release your application.
 ```shell
 $ yarn clean
 $ yarn build
-$ yarn pack
+$ yarn release
 ```
