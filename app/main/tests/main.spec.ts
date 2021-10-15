@@ -6,10 +6,6 @@ jest.setTimeout(60000);
 
 let app;
 
-test('dummy', () => {
-  expect(true).toBe(true);
-});
-
 beforeAll(async () => {
   app = await bootApp();
 });
