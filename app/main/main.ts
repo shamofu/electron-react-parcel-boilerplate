@@ -20,7 +20,7 @@ function createWindow() {
     if (isDev) { mainWindow.webContents.openDevTools(); }
   });
 
-  const devPath = 'http://localhost:1234';
+  const devPath = 'http://localhost:1124';
   const prodPath = format({
     pathname: resolve('dist/frontend/index.html'),
     protocol: 'file:',

@@ -44,9 +44,11 @@ jobs:
           node-version: 14
       - name: Install the dependencies
         run: yarn install
-      - name: Build the application
-        run: yarn release -mwl
-      - name: Release the application
+      - name: Build
+        run: yarn build
+      - name: Pack
+        run: yarn pack -mwl
+      - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
