@@ -9,7 +9,7 @@
   "targets": {
     "frontend": {
       "source": "app/renderer/index.html",
-      "context": "electron-renderer",
+      "context": "browser",
       "publicUrl": "./"
     },
     "backend": {
