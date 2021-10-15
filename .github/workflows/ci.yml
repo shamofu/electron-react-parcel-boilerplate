@@ -5,25 +5,30 @@ on: [push, pull_request]
 jobs:
   test:
     name: Test
-    if: always()
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: [14.x]
+      fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout the source
         uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Install Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+          cache: yarn
       - name: Install the dependencies
         run: yarn install
+      - name: Lint
+        run: yarn lint
+      - name: Build
+        run: yarn build
       - name: Run the tests
         uses: GabrielBB/xvfb-action@v1
         with:
-          run: yarn test
+          run: yarn test --coverage
 
   release:
     name: Release
@@ -33,15 +38,17 @@ jobs:
     steps:
       - name: Checkout the source
         uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: 14
       - name: Install the dependencies
         run: yarn install
-      - name: Build the application
-        run: yarn release -mwl
-      - name: Release the application
+      - name: Build
+        run: yarn build
+      - name: Release
+        run: yarn relase -mwl
+      - name: Deploy
         uses: softprops/action-gh-release@v1
         with:
           files: |

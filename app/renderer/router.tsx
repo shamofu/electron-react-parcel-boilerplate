@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import React from 'react';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
-import Root from './pages/root'
-import Start from './pages/start'
+import Root from './pages/root';
+import Start from './pages/start';
 
 export default () => {
   return (
@@ -13,5 +13,5 @@ export default () => {
         <Route component={() => <h1>204 No Content</h1>} />
       </Switch>
     </HashRouter>
-  )
-}
+  );
+};

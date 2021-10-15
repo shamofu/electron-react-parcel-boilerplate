@@ -1,6 +1,4 @@
-# Electron-React-Parcel-Boilerplate
-[![Dependencies Status](https://img.shields.io/david/shamofu/electron-react-parcel-boilerplate.svg?style=flat-square)](https://david-dm.org/shamofu/electron-react-parcel-boilerplate)
-[![DevDependencies Status](https://img.shields.io/david/dev/shamofu/electron-react-parcel-boilerplate.svg?style=flat-square)](https://david-dm.org/shamofu/electron-react-parcel-boilerplate?type=dev)
+# Electron + React + Parcel Boilerplate
 
 A boilerplate for Electron + React + Parcel.
 
@@ -14,12 +12,14 @@ $ yarn install
 ## Start hacking
 Now you can start hacking by executing the following command.
 ```shell
-$ yarn start
+$ yarn dev
 ```
-You will edit the files under `renderer` basically, or under `main` if you want to configure Electron.
+You will edit the files under `renderer` basically, or under `main` if you want to configure Electron itself.
 
 ## Deploy your application
-The command below deploys your application.
+The commands below release your application.
 ```shell
+$ yarn clean
+$ yarn build
 $ yarn release
 ```

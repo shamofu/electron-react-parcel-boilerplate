@@ -1,13 +1,13 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import Router from './router'
+import Router from './router';
 
 const render = (Component) => {
   ReactDOM.render(
     <Component />,
-    document.getElementById('root')
-  )
-}
+    document.getElementById('root'), // eslint-disable-line  no-undef
+  );
+};
 
-render(Router)
+render(Router);

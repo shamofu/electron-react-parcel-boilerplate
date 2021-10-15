@@ -1,13 +1,22 @@
 # output
-/.cache
+/.parcel-cache
 /coverage
 /app/renderer/.parcel
 /app/main/.parcel
 *.map
 /release
+/dist
 
 # dependencies
 /node_modules
 
 # logs
 *.log
+
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
