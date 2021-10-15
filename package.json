@@ -19,7 +19,7 @@
   },
   "scripts": {
     "dev": "run-s build serve",
-    "lint": "eslint",
+    "lint": "eslint \"**/*.{ts,tsx}\"",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "build": "parcel build",
     "pack": "electron-builder --x64 --publish=never",
@@ -92,6 +92,8 @@
     "@types/jest": "^27.0.2",
     "@types/react": "^17.0.29",
     "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
     "asar": "^3.1.0",
     "cross-env": "^7.0.3",
     "electron": "^13.5.2",

@@ -1,11 +1,8 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
 
 import Root from './pages/root';
 import Start from './pages/start';
-
-const history = createBrowserHistory();
 
 export default () => {
   return (
