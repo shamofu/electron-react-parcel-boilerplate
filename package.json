@@ -18,15 +18,15 @@
     }
   },
   "scripts": {
-    "dev": "run-p b:watch f:serve start",
+    "dev": "run-s build serve",
     "lint": "eslint",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "build": "parcel build",
     "pack": "electron-builder --x64 --publish=never",
-    "start": "electron dist/backend/main.js",
     "clean": "rimraf dist",
-    "f:serve": "parcel serve --target frontend --port 1124",
-    "b:watch": "parcel watch --target backend"
+    "serve": "run-p f:serve e:start -r",
+    "f:serve": "parcel serve app/renderer/index.html --dist-dir dist/frontend --port 1124",
+    "e:start": "electron dist/backend/main.js"
   },
   "build": {
     "productName": "ElectronReactParcel",
