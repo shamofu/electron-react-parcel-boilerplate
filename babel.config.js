@@ -1,16 +1,10 @@
 module.exports = api => {
   const isTest = api.env('test');
 
-  if (isTest) {
-    return {
-      "presets": [
-        "@babel/preset-react",
-        "@babel/preset-typescript"
-      ]
-    }
-  }
-  else {
-    return {
-    }
-  }
+  return isTest ? {
+    'presets': [
+      '@babel/preset-react',
+      '@babel/preset-typescript',
+    ],
+  } : {};
 };
