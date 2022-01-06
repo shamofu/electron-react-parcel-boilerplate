@@ -1,19 +1,12 @@
 import { jest } from '@jest/globals';
 
-import { bootApp, terminateApp } from './testApp';
-
 jest.setTimeout(60000);
 
-let app;
-
-beforeAll(async () => {
-  app = await bootApp();
+test('Spectron is now deprecated', async () => {
+  expect(true).toBe(true);
 });
 
-afterAll(async () => {
-  await terminateApp(app);
-});
-
+/*
 test('application title', async () => {
   expect(await app.client.getTitle()).toBe('Electron-React-Parcel-Boilerplate');
 });
@@ -24,3 +17,4 @@ test('go to Start', async () => {
   const bar = await app.client.$('h1');
   expect(await bar.getText()).toBe('Electron + React + Parcel');
 });
+*/
